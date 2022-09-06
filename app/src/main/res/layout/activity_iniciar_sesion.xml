@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Iniciar_sesion">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
+        app:srcCompat="@drawable/img"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <Button
+        android:id="@+id/Inicio"
+        android:layout_width="136dp"
+        android:layout_height="44dp"
+        android:background="@drawable/btn_bg"
+        android:text="Iniciar Sesión"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="552dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
