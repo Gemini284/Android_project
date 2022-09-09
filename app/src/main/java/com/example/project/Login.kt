@@ -1,6 +1,11 @@
-package com.example.project;
+package com.example.project
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-public class Login extends Activity {
+class Login : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
+    }
 }
