@@ -10,93 +10,92 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:text="Registrarse"
         android:textColor="#000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="80dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="99dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="50dp"
         android:background="@drawable/btn_bg"
         android:text="Siguiente"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="515dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
         android:text="¿Ya tienes una cuenta?"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="620dp" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="92dp"
         android:text="Inicia Sesión "
         android:textColor="#C61438"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:text="Correo Eléctronico"
-        android:textColor="#C61438"
-        app:layout_constraintBottom_toTopOf="@+id/CorreoR"
-        app:layout_constraintStart_toStartOf="@+id/CorreoR" />
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="620dp" />
 
     <EditText
-        android:id="@+id/CorreoR"
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="75dp"
+        android:id="@+id/ContraseñaR"
+        android:layout_width="303dp"
+        android:layout_height="55dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="1.0" />
+        android:inputType="textPassword"
+        app:passwordToggleEnabled="true"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="322dp" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
         android:text="Contraseña"
         android:textColor="#C61438"
-        app:layout_constraintBottom_toTopOf="@+id/ContraseñaR"
-        app:layout_constraintStart_toStartOf="@+id/ContraseñaR" />
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="303dp" />
 
     <EditText
-        android:id="@+id/ContraseñaR"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
+        android:id="@+id/CorreoR"
+        android:layout_width="303dp"
+        android:layout_height="41dp"
         android:ems="10"
-        android:inputType="textPassword"
-        app:passwordToggleEnabled = "true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo Eléctronico"
+        android:textColor="#C61438"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="#C61438"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="303dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="230dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
