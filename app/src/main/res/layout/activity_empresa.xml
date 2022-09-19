@@ -23,6 +23,7 @@
         android:layout_height="67dp"
         android:layout_marginBottom="50dp"
         android:text="Tecnológico de Monterrey"
+        android:textColor="#000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
