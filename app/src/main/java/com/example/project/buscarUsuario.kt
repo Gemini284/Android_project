@@ -7,7 +7,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityBuscarUsuarioBinding
 
-class buscarUsuario : AppCompatActivity() {
+class BuscarUsuarioActivity : AppCompatActivity() {
 
 private lateinit var binding: ActivityBuscarUsuarioBinding
 

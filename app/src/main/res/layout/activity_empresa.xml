@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_Empresa">
+    tools:context=".EmpresaActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/TEC_png" />
+        app:srcCompat="@drawable/tec_logo" />
 
     <TextView
         android:id="@+id/textView_empresa"
