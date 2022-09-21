@@ -63,7 +63,7 @@ class RegistrarActivity : AppCompatActivity() {
             Toast.makeText(this,"Registro con: $email", Toast.LENGTH_SHORT).show()
 
             //abre el perfil
-            startActivity(Intent(this, DonadorActivity::class.java))
+            startActivity(Intent(this, Activity_Donador::class.java))
             finish()
 
         }.addOnFailureListener { e->
