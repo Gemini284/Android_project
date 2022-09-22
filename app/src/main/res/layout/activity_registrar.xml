@@ -65,7 +65,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_name_register"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameRegister"
         app:passwordToggleEnabled="true" />
 
     <TextView
@@ -106,11 +106,11 @@
         android:layout_marginTop="218dp"
         android:text="Nombre"
         android:textColor="#C61438"
-        app:layout_constraintStart_toStartOf="@+id/editText_name_register"
+        app:layout_constraintStart_toStartOf="@+id/editTextNameRegister"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText_name_register"
+        android:id="@+id/editTextNameRegister"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="54dp"

@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
             progressDialog.setMessage("Haciendo login...")
             progressDialog.setCanceledOnTouchOutside(false)
 
-            FirebaseAuth.getInstance()
+            firebaseAuth = FirebaseAuth.getInstance()
             checkUser()
 
             binding.textViewRegisterNow.setOnClickListener {

@@ -18,6 +18,7 @@ class RegistrarActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private var email = ""
     private var password = ""
+    private var name = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarBinding.inflate(layoutInflater)
@@ -41,6 +42,7 @@ class RegistrarActivity : AppCompatActivity() {
     }
 
     private fun validateData() {
+        name = binding.editTextNameRegister.text.toString()
         email = binding.editTextEmailRegister.text.toString().trim()
         password = binding.editTextPasswordRegister.text.toString().trim()
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
