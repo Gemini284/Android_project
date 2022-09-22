@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         fun checkUser() {
             val firebaseUser = firebaseAuth.currentUser
             if(firebaseUser != null){
-                startActivity(Intent(this, DonadorActivity::class.java)) //Cambiar cuando tenga la clase del usuario
+                startActivity(Intent(this, Activity_Donador::class.java)) //Cambiar cuando tenga la clase del usuario
                 finish()
             }
         }
@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
 
             binding = ActivityLoginBinding.inflate(layoutInflater)
             setContentView(binding.root)
-            var mAuth = FirebaseAuth.getInstance();
+            var mAuth = FirebaseAuth.getInstance()
             actionBar = supportActionBar!!
             actionBar.title = "Login"
 
@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
                     val firebaseUser = firebaseAuth.currentUser
                     val email = firebaseUser!!.email
                     Toast.makeText(this,"Login con: $email", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,DonadorActivity::class.java))
+                    startActivity(Intent(this,Activity_Donador::class.java))
                     finish()
                 }
                 .addOnFailureListener { e->
