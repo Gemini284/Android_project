@@ -22,10 +22,10 @@
         android:layout_width="196dp"
         android:layout_height="0dp"
         android:layout_marginTop="288dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="330dp"
         android:text="rafaelaguilera@correo.com"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,9 +75,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="209dp"
         app:layout_constraintBottom_toBottomOf="@+id/button3"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button3"
         app:srcCompat="@android:drawable/ic_menu_preferences" />
@@ -176,4 +176,19 @@
         app:layout_constraintTop_toTopOf="@+id/imageView10"
         app:srcCompat="@android:drawable/ic_menu_day"
         tools:srcCompat="@drawable/basket" />
+
+    <Button
+        android:id="@+id/buttonLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="deslog"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView_empresa" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
