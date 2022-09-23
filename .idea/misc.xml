@@ -15,8 +15,10 @@
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_organizacion.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/content_scrolling.xml" value="0.176" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/drawable/btn_bg.xml" value="0.161" />
         <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_buscar_usuario.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_empresa.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_evento_org.xml" value="0.14356884057971014" />
         <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_login.xml" value="0.1828125" />
         <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_maps.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_organizacion.xml" value="0.22826086956521738" />
@@ -34,9 +36,6 @@
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_registrar.xml" value="0.2" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.162" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.162" />
-        <entry key="app/src/main/res/layout/activity_empresa.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/activity_evento_org.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/activity_evento_usuario.xml" value="0.26436716715494796" />
       </map>
     </option>
   </component>

@@ -33,7 +33,6 @@
         android:textColor="#0B0A0A"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:corneRadius="20dp"
         app:cornerRadius="9dp"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
