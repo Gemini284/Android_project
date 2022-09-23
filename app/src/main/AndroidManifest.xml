@@ -38,6 +38,12 @@
             android:name=".Activity_Donador"
             android:exported="false" />
         <activity
+            android:name=".Evento_ORG"
+            android:exported="false" />
+        <activity
+            android:name=".Evento_Usuario"
+            android:exported="false" />
+        <activity
             android:name=".Activity_Empresa"
             android:exported="false" />
         <activity
