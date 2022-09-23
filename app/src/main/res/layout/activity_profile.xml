@@ -19,29 +19,18 @@
         app:srcCompat="@drawable/usuario" />
 
     <TextView
-        android:id="@+id/textView_empresa"
-        android:layout_width="196dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="234dp"
-        android:layout_marginBottom="393dp"
-        android:text="rafaelaguilera@correo.com"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textView14"
-        android:layout_width="113dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="44dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
         android:layout_marginBottom="541dp"
         android:text=" Rafael Aguilera"
         android:textColor="#000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView_empresa"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
@@ -61,13 +50,15 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="107dp"
-        android:layout_height="69dp"
+        android:layout_height="0dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="#FFFFFF"
         android:text="Configuración"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -97,15 +88,16 @@
     <Button
         android:id="@+id/button6"
         android:layout_width="0dp"
-        android:layout_height="69dp"
+        android:layout_height="0dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="149dp"
+        android:layout_marginBottom="277dp"
         android:background="#FFFFFF"
         android:text="Donar"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView_empresa" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
         android:id="@+id/button7"
@@ -187,7 +179,20 @@
         android:text="Log off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView_empresa" />
+        app:layout_constraintStart_toEndOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="89dp"
+        android:text="Rafael_Aguilera@gmail.com"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
