@@ -41,4 +41,9 @@ class Activity_Donador : AppCompatActivity() {
         }
     }
 
+    fun mapas(view: View?){
+        val intent = Intent(this, MapsActivity::class.java)
+        startActivity(intent)
+    }
+
 }
