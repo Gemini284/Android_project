@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/Nombre"
         android:layout_width="177dp"
         android:layout_height="0dp"
         android:layout_marginTop="251dp"
@@ -147,7 +147,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/Nombre"
         app:srcCompat="@android:drawable/ic_menu_compass"
         tools:srcCompat="@android:drawable/ic_menu_add" />
 
