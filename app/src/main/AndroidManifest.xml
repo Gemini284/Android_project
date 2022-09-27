@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.project">
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -29,7 +28,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCZp3zq2aRKumTwh5yvpjQCrW1_iJrWPnQ" />
+            android:value="AIzaSyAnLdvg36EDdPnmBNH5ZXgC191rT4lhqmI" />
 
         <activity
             android:name=".MapsActivity"
