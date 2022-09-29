@@ -3,11 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_buscar_usuario.xml" value="0.1" />
-        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_empresas_aliadas.xml" value="0.1" />
-        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_login.xml" value="0.13541666666666666" />
-        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_maps.xml" value="0.14" />
-        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_organizacion.xml" value="0.16" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/btn_bg.xml" value="0.2555" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/ic_hide_password_24.xml" value="0.2265" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2555" />
@@ -17,8 +12,25 @@
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_empresa.xml" value="0.264" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_empresas_aliadas.xml" value="0.2" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_organizacion.xml" value="0.21784420289855072" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
         <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/content_scrolling.xml" value="0.176" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/drawable/btn_bg.xml" value="0.161" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_buscar_usuario.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_empresa.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_empresas_aliadas.xml" value="0.25" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_evento_org.xml" value="0.14356884057971014" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_evento_usuario.xml" value="0.25" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_login.xml" value="0.1828125" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_maps.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_organizacion.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_producto.xml" value="0.25" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_productos.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_productos2.xml" value="0.19739583333333333" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_profile.xml" value="0.264" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/activity_registrar.xml" value="0.1828125" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/content_scrolling.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project1/app/src/main/res/layout/main_item.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.162" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable/btn_bg.xml" value="0.2475" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable/ic_hide_password_24.xml" value="0.193" />
