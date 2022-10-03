@@ -7,11 +7,14 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class Activity_Donador : AppCompatActivity() {
     private  lateinit var  binding: ActivityProfileBinding
     private lateinit var actionBar: ActionBar
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,14 +23,18 @@ class Activity_Donador : AppCompatActivity() {
 
         actionBar = supportActionBar!!
         actionBar.title = "Profile"
-
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
+        databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios")
 
         binding.buttonLog.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
         }
+
+        binding.email.text = firebaseAuth.currentUser?.email.toString()
+        binding.Nombre.text =
+            firebaseAuth.currentUser?.let { databaseReference.child("Usuarios").child(it.uid).get().toString() }
     }
 
     private fun checkUser() {

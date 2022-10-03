@@ -10,12 +10,15 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.example.project.databinding.ActivityRegistrarBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class RegistrarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrarBinding
     private lateinit var actionBar: ActionBar
     private lateinit var progressDialog: ProgressDialog
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
     private var email = ""
     private var password = ""
     private var name = ""
@@ -60,8 +63,18 @@ class RegistrarActivity : AppCompatActivity() {
         progressDialog.show()
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
             progressDialog.dismiss()
+
             val firebaseUser = firebaseAuth.currentUser
             val email = firebaseUser!!.email
+            val uid = firebaseAuth.currentUser?.uid
+
+
+            databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios")
+
+            if(uid != null){
+
+                databaseReference.child(uid).setValue(name)
+            }
             Toast.makeText(this,"Registro con: $email", Toast.LENGTH_SHORT).show()
 
             //abre el perfil
