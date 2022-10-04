@@ -119,13 +119,13 @@
         android:layout_marginBottom="17dp"
         android:background="#FFFFFF"
         android:text="Eventos"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/alimentosbtton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/alimentosbtton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="121dp"
@@ -190,7 +190,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/alimentosbtton" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -200,7 +200,7 @@
         android:layout_marginEnd="51dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView11"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/alimentosbtton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
         app:srcCompat="@android:drawable/ic_menu_search" />

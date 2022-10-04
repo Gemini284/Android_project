@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,26 +18,31 @@ import javax.annotation.Nonnull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class mainAdapter extends FirebaseRecyclerAdapter<MainModel,mainAdapter.myviewHolder>{
+
+
+public class mainAdapter extends FirebaseRecyclerAdapter<MainModel,mainAdapter.myviewHolder> {
+
     /**
      * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
      * {@link FirebaseRecyclerOptions} for configuration options.
      *
      * @param options
      */
+
     public mainAdapter(@NonNull FirebaseRecyclerOptions<MainModel> options) {
         super(options);
     }
 
     @Override
     protected void onBindViewHolder(@NonNull myviewHolder holder, int position, @NonNull MainModel model) {
+
         holder.nombre.setText(model.getNombre());
-        holder.cantidadAct.setText(model.getCantidadAct());
-        holder.cantidadDes.setText(model.getCantidadDes());
+        holder.cantidadAct.setText(String.valueOf(model.getCantidadAct()));
+        holder.cantidadDese.setText(String.valueOf(model.getCantidadDes()));
 
         Glide.with(holder.img.getContext())
                 .load(model.getTulr())
-                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark)
+                .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .circleCrop()
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
@@ -51,18 +57,19 @@ public class mainAdapter extends FirebaseRecyclerAdapter<MainModel,mainAdapter.m
 
     class myviewHolder extends RecyclerView.ViewHolder{
         CircleImageView img;
-        TextView nombre, cantidadDes,cantidadAct;
+        TextView nombre, cantidadDese,cantidadAct;
 
         public myviewHolder(@Nonnull View itemView){
             super(itemView);
 
             img= (CircleImageView)itemView.findViewById(R.id.img1);
-            nombre = (TextView)itemView.findViewById(R.id.nametext);
-            cantidadDes =(TextView)itemView.findViewById(R.id.CantidadDese);
+            nombre = (TextView)itemView.findViewById(R.id.producto);
+            cantidadDese =(TextView)itemView.findViewById(R.id.CantidadDese);
             cantidadAct =(TextView)itemView.findViewById(R.id.CantidadAct);
 
         }
 
     }
+
 
 }
