@@ -129,10 +129,13 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="#020202"
+        android:textColorHint="#78909C"
         app:layout_constraintBottom_toTopOf="@+id/Inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_email"
+        tools:ignore="DuplicateSpeakableTextCheck"
+        android:autofillHints="" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
