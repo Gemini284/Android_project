@@ -26,7 +26,7 @@
         android:layout_marginBottom="19dp"
         android:text="banco@correo.com"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/CrearORG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
@@ -58,7 +58,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/CrearORG" />
 
     <Button
         android:id="@+id/button3"
@@ -99,7 +99,7 @@
         app:srcCompat="@android:drawable/ic_menu_mylocation" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/CrearORG"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="121dp"
@@ -145,7 +145,7 @@
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="27dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintEnd_toStartOf="@+id/CrearORG"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nombre"
         app:srcCompat="@android:drawable/ic_menu_compass"

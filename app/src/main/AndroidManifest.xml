@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".CrearEvento_ORG"
+            android:exported="false" />
+        <activity
             android:name=".Productos"
             android:exported="false" />
         <!--
