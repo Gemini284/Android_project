@@ -67,9 +67,6 @@
             android:name=".EmpresasAliadas"
             android:exported="false" />
         <activity
-            android:name=".IniciarSesionActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegistrarActivity"
             android:exported="false" />
         <activity

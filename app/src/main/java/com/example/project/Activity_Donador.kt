@@ -32,6 +32,12 @@ class Activity_Donador : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
         }
+        binding.alimentosbtton.setOnClickListener {
+            startActivity(Intent(this, mainAdapter::class.java))
+        }
+        binding.bttnEvento.setOnClickListener {
+            startActivity(Intent(this,Evento_Usuario::class.java))
+        }
 
         binding.email.text = firebaseAuth.currentUser?.email.toString()
         binding.Nombre.text = uid?.let { databaseReference.child(it).get().toString() }

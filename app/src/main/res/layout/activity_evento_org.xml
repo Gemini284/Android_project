@@ -35,13 +35,13 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:cornerRadius="9dp"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintBottom_toTopOf="@+id/bttnEvento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/bttnEvento"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="42dp"
@@ -74,6 +74,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintTop_toBottomOf="@+id/bttnEvento" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
