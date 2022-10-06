@@ -11,8 +11,12 @@
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.2" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_main.xml" value="0.11980749746707194" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_registrar.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_buscar_evento_donador.xml" value="0.26865671641791045" />
         <entry key="app/src/main/res/layout/activity_crear_evento_org.xml" value="0.24133170307546425" />
         <entry key="app/src/main/res/layout/activity_evento_org.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_evento_usuario.xml" value="0.25460357666015626" />
+        <entry key="app/src/main/res/layout/event_item.xml" value="0.24895833333333334" />
+        <entry key="app/src/main/res/layout/event_list.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>
