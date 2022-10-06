@@ -22,6 +22,7 @@ class RegistrarActivity : AppCompatActivity() {
     private var email = ""
     private var password = ""
     private var name = ""
+    private var mail = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarBinding.inflate(layoutInflater)
@@ -47,6 +48,7 @@ class RegistrarActivity : AppCompatActivity() {
     private fun validateData() {
         name = binding.editTextNameRegister.text.toString()
         email = binding.editTextEmailRegister.text.toString().trim()
+        mail = binding.editTextEmailRegister.text.toString().trim()
         password = binding.editTextPasswordRegister.text.toString().trim()
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.editTextEmailRegister.error = "Formato de e-mail invalido"
@@ -73,7 +75,8 @@ class RegistrarActivity : AppCompatActivity() {
 
             if(uid != null){
 
-                databaseReference.child(uid).setValue(name)
+                databaseReference.child(uid).child("Nombre").setValue(name)
+                databaseReference.child(uid).child("Email").setValue(mail)
             }
             Toast.makeText(this,"Registro con: $email", Toast.LENGTH_SHORT).show()
 
