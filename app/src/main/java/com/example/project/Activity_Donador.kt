@@ -2,19 +2,21 @@ package com.example.project
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
+import com.google.firebase.firestore.auth.User
 
 class Activity_Donador : AppCompatActivity() {
     private  lateinit var  binding: ActivityProfileBinding
     private lateinit var actionBar: ActionBar
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var user: User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +28,18 @@ class Activity_Donador : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
         val uid = firebaseAuth.currentUser?.uid
-        databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios")
+        var nombre = "pepe"
+        databaseReference = FirebaseDatabase.getInstance().getReference(uid!!)
+        databaseReference.child("Nombre").addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                user = snapshot.getValue(User::class.java)!!
+                binding.Nombre.setText(user.)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
 
         binding.buttonLog.setOnClickListener {
             firebaseAuth.signOut()
@@ -40,7 +53,7 @@ class Activity_Donador : AppCompatActivity() {
         }
 
         binding.email.text = firebaseAuth.currentUser?.email.toString()
-        binding.Nombre.text = uid?.let { databaseReference.child(it).get().toString() }
+        //binding.Nombre.text = nombre
     }
 
     private fun checkUser() {
