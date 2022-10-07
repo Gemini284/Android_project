@@ -3,21 +3,43 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/pirul/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_buscar_usuario.xml" value="0.22" />
-        <entry key="..\:/Users/pirul/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_login.xml" value="0.22178130511463845" />
-        <entry key="..\:/Users/pirul/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_profile.xml" value="0.25" />
-        <entry key="..\:/Users/pirul/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
-        <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_profile.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_buscar_evento_donador.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_buscar_usuario.xml" value="0.1" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_crear_evento_org.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_empresa.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_empresas_aliadas.xml" value="0.18" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_evento_org.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_evento_usuario.xml" value="0.2" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_login.xml" value="0.21" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_maps.xml" value="0.14" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_organizacion.xml" value="0.16" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_productos2.xml" value="0.25" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_profile.xml" value="0.2" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/activity_registrar.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/layout/row_usuarios.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/karla/AndroidStudioProjects/Android_project/app/src/main/res/menu/menu_buscar_usuario.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/btn_bg.xml" value="0.2555" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/ic_hide_password_24.xml" value="0.2265" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2555" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/drawable/ic_show_password_24dp.xml" value="0.121" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_buscar_usuario.xml" value="0.264" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_donador.xml" value="0.4" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_empresa.xml" value="0.264" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_empresas_aliadas.xml" value="0.2" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/activity_registrar.xml" value="0.25" />
+        <entry key="..\:/Users/pirul/OneDrive/Documentos/SEMESTRE 5/Redes y sistemas de software/Projecto/app/src/main/res/layout/content_scrolling.xml" value="0.176" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.162" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable/btn_bg.xml" value="0.2475" />
-        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.2" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable/ic_hide_password_24.xml" value="0.193" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.162" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/drawable/ic_show_password_24dp.xml" value="0.193" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.264" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_main.xml" value="0.11980749746707194" />
-        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_registrar.xml" value="0.264" />
-        <entry key="app/src/main/res/layout/activity_buscar_evento_donador.xml" value="0.26865671641791045" />
-        <entry key="app/src/main/res/layout/activity_crear_evento_org.xml" value="0.24133170307546425" />
-        <entry key="app/src/main/res/layout/activity_evento_org.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_evento_usuario.xml" value="0.25460357666015626" />
-        <entry key="app/src/main/res/layout/event_item.xml" value="0.24895833333333334" />
-        <entry key="app/src/main/res/layout/event_list.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/layout/activity_registrar.xml" value="0.2" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.162" />
+        <entry key="..\:/Users/sopib/Downloads/Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.162" />
       </map>
     </option>
   </component>
