@@ -36,6 +36,11 @@ public class AdapterUsuario extends RecyclerView.Adapter<AdapterUsuario.viewhold
 
         Usuario ms = usuarioList.get(position);
 
+        holder.tv_email.setText(ms.getEmail());
+        holder.tv_nombre.setText(ms.getNombre());
+
+
+
     }
 
     @Override
