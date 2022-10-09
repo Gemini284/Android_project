@@ -27,26 +27,26 @@ class Activity_Donador : AppCompatActivity() {
         actionBar.title = "Profile"
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
-        val uid = firebaseAuth.currentUser?.uid
+        /*al uid = firebaseAuth.currentUser?.uid
         var nombre = "pepe"
         databaseReference = FirebaseDatabase.getInstance().getReference(uid!!)
         databaseReference.child("Nombre").addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 user = snapshot.getValue(User::class.java)!!
-                binding.Nombre.setText(user.)
+                //binding.Nombre.setText(user.) comento esto porque no dejaba probar xd
             }
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
-        })
+        })*/
 
         binding.buttonLog.setOnClickListener {
             firebaseAuth.signOut()
             checkUser()
         }
         binding.alimentosbtton.setOnClickListener {
-            startActivity(Intent(this, mainAdapter::class.java))
+            startActivity(Intent(this, Productos::class.java))
         }
         binding.bttnEvento.setOnClickListener {
             startActivity(Intent(this,Evento_Usuario::class.java))

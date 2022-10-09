@@ -73,20 +73,24 @@ class RegistrarActivity : AppCompatActivity() {
 
             databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios")
 
-            if(uid != null){
+            if (uid != null) {
 
                 databaseReference.child(uid).child("Nombre").setValue(name)
                 databaseReference.child(uid).child("Email").setValue(mail)
             }
-            Toast.makeText(this,"Registro con: $email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Registro con: $email", Toast.LENGTH_SHORT).show()
 
             //abre el perfil
             startActivity(Intent(this, Activity_Donador::class.java))
             finish()
 
-        }.addOnFailureListener { e->
+        }.addOnFailureListener { e ->
             progressDialog.dismiss()
-            Toast.makeText(this, "Registro fallado debido a ${e.message}",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Registro fallado debido a ${e.message}", Toast.LENGTH_SHORT)
+                .show()
+        }
+        binding.bttnInicio.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".productosOrg"
+            android:exported="false" />
+        <activity
             android:name=".BuscarEventoDonador"
             android:exported="false" />
         <activity

@@ -38,11 +38,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
         android:text="¿Ya tienes una cuenta?"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bttnInicio"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/bttnInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
