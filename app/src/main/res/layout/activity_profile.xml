@@ -41,7 +41,6 @@
         android:layout_marginBottom="308dp"
         android:background="#E4E4E4"
         android:backgroundTint="#FFFFFF"
-        android:onClick="mapas"
         android:text=" Puntos de recoleccón"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
