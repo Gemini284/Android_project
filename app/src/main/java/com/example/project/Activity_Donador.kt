@@ -57,6 +57,7 @@ class Activity_Donador : AppCompatActivity() {
 
         binding.email.text = firebaseAuth.currentUser?.email.toString()
         //binding.Nombre.text = nombre
+
     }
 
     private fun checkUser() {

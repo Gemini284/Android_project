@@ -10,21 +10,38 @@
         android:id="@+id/textPuntosTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
         android:text="Puntos de Recolección"
         android:textColor="#35424A"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textPuntosInfo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="77dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textPuntosInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="100dp"
         android:text="Consulta tu punto de recolección más cercano"
         android:textColor="#F75F6A"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/map_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="128dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/map_placeholder"
+        android:layout_width="340dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPuntosInfo"
+
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
