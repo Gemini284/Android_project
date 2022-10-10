@@ -25,7 +25,7 @@
         android:text="Tecnológico de Monterrey"
         android:textColor="#000"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/bttnPuntos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -35,13 +35,13 @@
         android:layout_height="0dp"
         android:layout_marginBottom="72dp"
         android:text="tec@tec.mx"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/bttnPuntos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/bttnPuntos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="141dp"
@@ -62,7 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/bttnPuntos" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -86,7 +86,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="193dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/bttnPuntos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_mapmode" />

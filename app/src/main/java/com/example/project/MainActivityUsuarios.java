@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.ktx.Firebase;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class MainActivityUsuarios extends AppCompatActivity {
@@ -65,6 +66,33 @@ public class MainActivityUsuarios extends AppCompatActivity {
             }
         });
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                buscar(s);
+                return true;
+            }
+        });
+
 
     }
+
+    private void buscar(String s) {
+        ArrayList<Usuario>milista = new ArrayList<>();
+        for (Usuario obj : list) {
+            if (obj.getNombre().toLowerCase().contains(s.toLowerCase())) {
+                milista.add(obj);
+            }
+
+        }
+        AdapterUsuario adapter = new AdapterUsuario(milista);
+        rv.setAdapter(adapter);
+
+    }
+
 }

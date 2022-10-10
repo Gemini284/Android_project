@@ -15,18 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
-        <activity
-            android:name=".productosOrg"
-            android:exported="false" />
-        <activity
-            android:name=".BuscarEventoDonador"
-            android:exported="false" />
-        <activity
-            android:name=".CrearEvento_ORG"
-            android:exported="false" />
-        <activity
-            android:name=".Productos"
-            android:exported="false" />
+
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -40,12 +29,27 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAnLdvg36EDdPnmBNH5ZXgC191rT4lhqmI" />
+            android:value="AIzaSyCDVVm03yXuhCmvQxsW166VsDm1vd2RRR0" />
 
         <activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
+            android:name=".PuntoRecoleccionActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".productosOrg"
+            android:exported="false" />
+        <activity
+            android:name=".BuscarEventoDonador"
+            android:exported="false" />
+        <activity
+            android:name=".CrearEvento_ORG"
+            android:exported="false" />
+        <activity
+            android:name=".Productos"
+            android:exported="false" />
         <activity
             android:name=".Activity_Organizacion"
             android:exported="false" />
