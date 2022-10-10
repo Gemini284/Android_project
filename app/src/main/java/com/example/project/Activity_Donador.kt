@@ -51,6 +51,9 @@ class Activity_Donador : AppCompatActivity() {
         binding.bttnEvento.setOnClickListener {
             startActivity(Intent(this,Evento_Usuario::class.java))
         }
+        binding.bttnPuntos.setOnClickListener{
+            startActivity(Intent(this, PuntoRecoleccionActivity::class.java))
+        }
 
         binding.email.text = firebaseAuth.currentUser?.email.toString()
         //binding.Nombre.text = nombre
