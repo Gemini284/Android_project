@@ -46,7 +46,7 @@ class Activity_Donador : AppCompatActivity() {
             checkUser()
         }
         binding.alimentosbtton.setOnClickListener {
-            startActivity(Intent(this, Productos::class.java))
+            startActivity(Intent(this, productosOrg::class.java))
         }
         binding.bttnEvento.setOnClickListener {
             startActivity(Intent(this,Evento_Usuario::class.java))

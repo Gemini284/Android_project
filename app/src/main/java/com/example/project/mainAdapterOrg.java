@@ -45,23 +45,23 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myviewHolder holder,  int position, @NonNull MainModel model) {
+    protected void onBindViewHolder(@NonNull myviewHolder holder,  final int position, @NonNull MainModel model) {
 
         holder.nombre.setText(model.getNombre());
         holder.cantidadAct.setText(String.valueOf(model.getCantidadAct()));
-        holder.cantidadDese.setText(String.valueOf(model.getCantidadDes()));
+        holder.cantidadDes.setText(String.valueOf(model.getCantidadDes()));
 
-        Glide.with(holder.img.getContext())
+        Glide.with(holder.tulr.getContext())
                 .load(model.getTulr())
                 .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .circleCrop()
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
-                .into(holder.img);
+                .into(holder.tulr);
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View V) {
-                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.tulr.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup))
                         .setExpanded(true, 1200)
                         .create();
@@ -71,16 +71,16 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
                 View view = dialogPlus.getHolderView();
 
                 EditText nombre = view.findViewById(R.id.txtName);
-                EditText cantidadDese = view.findViewById(R.id.txtDese);
+                EditText cantidadDes = view.findViewById(R.id.txtDese);
                 EditText cantidadAct = view.findViewById(R.id.txtAct);
-                EditText image = view.findViewById(R.id.txtImage);
+                EditText tulr =view.findViewById(R.id.txtImage);
 
                 Button btnUpdate= view.findViewById(R.id.btnUpdate);
 
                 nombre.setText(model.getNombre());
-                cantidadDese.setText(model.getCantidadDes());
-                cantidadAct.setText(model.getCantidadAct());
-                image.setText(model.getTulr());
+                cantidadDes.setText(String.valueOf(model.getCantidadDes()));
+                cantidadAct.setText(String.valueOf(model.getCantidadAct()));
+                tulr.setText(model.getTulr());
 
                 dialogPlus.show();
 
@@ -89,9 +89,9 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
                     public void onClick(View v) {
                         Map<String,Object> map = new HashMap<>();
                         map.put("nombre",nombre.getText().toString());
-                        map.put("cantidad Deseada", cantidadDese.getText().toString());
-                        map.put("cantidad actual",cantidadAct.getText().toString());
-                        map.put("Link imagen",image.getText().toString());
+                        map.put("CantidadDes", cantidadDes.getText().toString());
+                        map.put("CantidadAct",cantidadAct.getText().toString());
+                        map.put("tulr",tulr.getText().toString());
 
                         FirebaseDatabase.getInstance().getReference().child("Inventario")
                                 .child(getRef(position) .getKey()).updateChildren(map)
@@ -148,17 +148,17 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
     }
 
     class myviewHolder extends RecyclerView.ViewHolder{
-        CircleImageView img;
-        TextView nombre, cantidadDese,cantidadAct;
+        CircleImageView tulr;
+        TextView nombre, cantidadDes,cantidadAct;
 
         Button btnEdit,btnDelete;
 
         public myviewHolder(@Nonnull View itemView){
             super(itemView);
 
-            img= (CircleImageView)itemView.findViewById(R.id.img1);
+            tulr= (CircleImageView)itemView.findViewById(R.id.img1);
             nombre = (TextView)itemView.findViewById(R.id.producto);
-            cantidadDese =(TextView)itemView.findViewById(R.id.CantidadDese);
+            cantidadDes =(TextView)itemView.findViewById(R.id.CantidadDese);
             cantidadAct =(TextView)itemView.findViewById(R.id.CantidadAct);
 
             btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
@@ -166,6 +166,5 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
         }
 
     }
-
 
 }
