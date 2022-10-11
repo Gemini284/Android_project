@@ -4,12 +4,15 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -17,15 +20,43 @@ class LoginActivity : AppCompatActivity() {
         private lateinit var binding: ActivityLoginBinding
         private lateinit var actionBar: ActionBar
         private lateinit var progressDialog: ProgressDialog
+        private lateinit var databaseReference: DatabaseReference
         private var email = ""
         private var password = ""
+        private var isOrg = false
 
         fun checkUser() {
+            databaseReference = Firebase.database.getReference("Usuarios")
             val firebaseUser = firebaseAuth.currentUser
-            if(firebaseUser != null){
-                startActivity(Intent(this, Activity_Donador::class.java)) //Cambiar cuando tenga la clase del usuario
-                finish()
+            val uid = firebaseUser?.uid
+
+            if (uid != null) {
+                databaseReference.child(uid).child("isOrg").get().addOnSuccessListener {
+                    isOrg = it.value as Boolean
+                    Toast.makeText(this,"${isOrg}", Toast.LENGTH_SHORT).show()
+                    if(firebaseUser != null && isOrg == false){
+                        //Toast.makeText(this,"NO ES ORGANIZACION", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, Activity_Donador::class.java)) //Cambiar cuando tenga la clase del usuario
+                        finish()
+                    } else {
+                        //Toast.makeText(this,"SI ES ORGANIZACION", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this, Activity_Organizacion::class.java)) //Cambiar cuando tenga la clase del usuario
+                        finish()
+                    }
+                }.addOnFailureListener{
+                    Log.e("firebase", "Error getting data", it)
+                }
             }
+
+//            if(firebaseUser != null && isOrg == false){
+//                Toast.makeText(this,"NO ES ORGANIZACION", Toast.LENGTH_SHORT).show()
+//                startActivity(Intent(this, Activity_Donador::class.java)) //Cambiar cuando tenga la clase del usuario
+//                finish()
+//            } else {
+//                Toast.makeText(this,"SI ES ORGANIZACION", Toast.LENGTH_SHORT).show()
+//                startActivity(Intent(this, Activity_Organizacion::class.java)) //Cambiar cuando tenga la clase del usuario
+//                finish()
+//            }
         }
 
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +108,7 @@ class LoginActivity : AppCompatActivity() {
                     val firebaseUser = firebaseAuth.currentUser
                     val email = firebaseUser!!.email
                     Toast.makeText(this,"Login con: $email", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,Activity_Donador::class.java))
+                    checkUser()
                     finish()
                 }
                 .addOnFailureListener { e->

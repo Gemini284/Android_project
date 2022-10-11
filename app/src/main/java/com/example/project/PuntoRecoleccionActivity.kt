@@ -1,17 +1,12 @@
 package com.example.project
 
-import android.Manifest
-import android.content.Context
-import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.MapFragment
-import com.google.android.material.internal.ContextUtils
+import com.google.android.gms.maps.SupportMapFragment
 
 
 class PuntoRecoleccionActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_punto_recoleccion)
@@ -24,5 +19,6 @@ class PuntoRecoleccionActivity : AppCompatActivity() {
                 .commitAllowingStateLoss()
         }
     }
+
 
 }

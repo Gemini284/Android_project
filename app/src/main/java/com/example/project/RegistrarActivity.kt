@@ -51,7 +51,7 @@ class RegistrarActivity : AppCompatActivity() {
         email = binding.editTextEmailRegister.text.toString().trim()
         mail = binding.editTextEmailRegister.text.toString().trim()
         password = binding.editTextPasswordRegister.text.toString().trim()
-        isOrg = binding.orgSwitch.isActivated
+        isOrg = binding.orgSwitch.isChecked
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.editTextEmailRegister.error = "Formato de e-mail invalido"
         }else if(TextUtils.isEmpty(password)){
