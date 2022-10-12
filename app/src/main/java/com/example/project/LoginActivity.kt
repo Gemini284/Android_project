@@ -33,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
             if (uid != null) {
                 databaseReference.child(uid).child("isOrg").get().addOnSuccessListener {
                     isOrg = it.value as Boolean
-                    Toast.makeText(this,"${isOrg}", Toast.LENGTH_SHORT).show()
                     if(firebaseUser != null && isOrg == false){
                         //Toast.makeText(this,"NO ES ORGANIZACION", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this, Activity_Donador::class.java)) //Cambiar cuando tenga la clase del usuario
