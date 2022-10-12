@@ -36,13 +36,12 @@ public class productosOrg extends AppCompatActivity {
                         .build();
         mainAdapterOrg = new mainAdapterOrg(options);
         recyclerView.setAdapter(mainAdapterOrg);
-        floatingActionButton = (FloatingActionButton)findViewById(R.id.floatingActionButton);
 
+        floatingActionButton = (FloatingActionButton)findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),AddActivity.class));
-
             }
         });
     }

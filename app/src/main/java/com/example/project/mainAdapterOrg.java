@@ -23,6 +23,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
+import org.checkerframework.checker.units.qual.A;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,7 +48,7 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull mainAdapterOrg.myviewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull MainModel model) {
+    protected void onBindViewHolder(@NonNull mainAdapterOrg.myviewHolder holder, final int position, @NonNull MainModel model) {
 
         holder.nombre.setText(model.getNombre());
         holder.cantidadAct.setText(String.valueOf(model.getCantidadAct()));
@@ -104,6 +106,29 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
                                         dialogPlus.dismiss();
                                     }
                                 });
+                    }
+                });
+                holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(holder.nombre.getContext());
+                        builder.setTitle("¿Seguro?");
+                        builder.setMessage("Los datos eliminados no podran ser eliminados");
+
+                        builder.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                FirebaseDatabase.getInstance().getReference().child("Inventario")
+                                        .child(getRef(position).getKey()).removeValue();
+                            }
+                        });
+                        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(holder.nombre.getContext(),"Cancelado", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        builder.show();
                     }
                 });
             }
