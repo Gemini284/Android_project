@@ -9,211 +9,144 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="99dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginBottom="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_empresa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="70dp"
         app:srcCompat="@drawable/usuario"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="96dp"
         tools:srcCompat="@drawable/img" />
 
     <TextView
         android:id="@+id/textView_empresa"
         android:layout_width="143dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
+        android:layout_height="70dp"
         android:text="banco@correo.com"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/CrearORG"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="208dp" />
 
     <TextView
         android:id="@+id/Nombre"
-        android:layout_width="177dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="251dp"
-        android:layout_marginBottom="51dp"
-        android:text="Banco de Alimentos GDL"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:text="Banco de Alimentos "
         android:textColor="#000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="176dp" />
 
     <Button
         android:id="@+id/bttnPuntos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="8dp"
-        android:background="#E4E4E4"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:background="@drawable/blue_bg"
         android:text=" Puntos de recoleccón"
-        app:layout_constraintBottom_toTopOf="@+id/bttnEvento"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/CrearORG" />
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="457dp" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="45dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:background="@drawable/blue_bg"
         android:text="Configuración"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/editInven" />
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="702dp" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginBottom="34dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:srcCompat="@android:drawable/ic_menu_preferences" />
+        android:layout_width="95dp"
+        android:layout_height="58dp"
+        app:srcCompat="@android:drawable/ic_menu_preferences"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="695dp" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toStartOf="@+id/bttnPuntos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+        android:layout_width="95dp"
+        android:layout_height="58dp"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="457dp" />
 
     <Button
         android:id="@+id/CrearORG"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="31dp"
-        android:background="#FFFFFF"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:background="@drawable/blue_bg"
         android:text="Empresas aliadas"
-        app:layout_constraintBottom_toTopOf="@+id/bttnPuntos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView_empresa" />
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="392dp" />
 
     <Button
         android:id="@+id/bttnEvento"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="17dp"
-        android:background="#FFFFFF"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:background="@drawable/blue_bg"
         android:text="Eventos"
-        app:layout_constraintBottom_toTopOf="@+id/alimentosbtton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/bttnPuntos" />
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="521dp" />
 
     <Button
         android:id="@+id/alimentosbtton"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="12dp"
-        android:background="#FFFFFF"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:background="@drawable/blue_bg"
         android:text="Buscar Usuarios"
-        app:layout_constraintBottom_toTopOf="@+id/editInven"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/bttnEvento" />
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="579dp" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="27dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toStartOf="@+id/CrearORG"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nombre"
+        android:layout_width="95dp"
+        android:layout_height="58dp"
         app:srcCompat="@android:drawable/ic_menu_compass"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="392dp"
         tools:srcCompat="@android:drawable/ic_menu_add" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/bttnEvento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        android:layout_width="95dp"
+        android:layout_height="58dp"
         app:srcCompat="@android:drawable/ic_menu_day"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="521dp"
         tools:srcCompat="@android:drawable/ic_menu_agenda" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/editInven"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        android:layout_width="95dp"
+        android:layout_height="58dp"
         app:srcCompat="@android:drawable/ic_menu_day"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="637dp"
         tools:srcCompat="@drawable/basket" />
 
     <Button
         android:id="@+id/editInven"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="134dp"
+        android:layout_height="46dp"
+        android:background="@drawable/blue_bg"
         android:text="Editar inventario"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
-        app:layout_constraintTop_toBottomOf="@+id/alimentosbtton" />
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="637dp" />
 
     <Button
         android:id="@+id/buttonLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
         android:background="@drawable/btn_bg"
         android:text="Log off"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
+        tools:layout_editor_absoluteX="287dp"
+        tools:layout_editor_absoluteY="748dp" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
-        app:layout_constraintEnd_toStartOf="@+id/alimentosbtton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:srcCompat="@android:drawable/ic_menu_search" />
+        android:layout_width="95dp"
+        android:layout_height="58dp"
+
+        app:srcCompat="@android:drawable/ic_menu_search"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="579dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
