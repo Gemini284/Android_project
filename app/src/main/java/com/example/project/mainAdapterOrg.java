@@ -40,131 +40,104 @@ public class mainAdapterOrg extends FirebaseRecyclerAdapter<MainModel, mainAdapt
      *
      * @param options
      */
+
     public mainAdapterOrg(@NonNull FirebaseRecyclerOptions<MainModel> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull myviewHolder holder,  final int position, @NonNull MainModel model) {
+    protected void onBindViewHolder(@NonNull mainAdapterOrg.myviewHolder holder, @SuppressLint("RecyclerView") int position, @NonNull MainModel model) {
 
         holder.nombre.setText(model.getNombre());
         holder.cantidadAct.setText(String.valueOf(model.getCantidadAct()));
-        holder.cantidadDes.setText(String.valueOf(model.getCantidadDes()));
+        holder.cantidadDese.setText(String.valueOf(model.getCantidadDes()));
 
-        Glide.with(holder.tulr.getContext())
+        Glide.with(holder.img.getContext())
                 .load(model.getTulr())
                 .placeholder(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
                 .circleCrop()
                 .error(com.firebase.ui.database.R.drawable.common_google_signin_btn_icon_dark_normal)
-                .into(holder.tulr);
+                .into(holder.img);
 
         holder.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View V) {
-                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.tulr.getContext())
+            public void onClick(View v) {
+                final DialogPlus dialogPlus = DialogPlus.newDialog(holder.img.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup))
                         .setExpanded(true, 1200)
                         .create();
-
                 //dialogPlus.show();
-
                 View view = dialogPlus.getHolderView();
+                EditText name = view.findViewById(R.id.txtName);
+                EditText CantidadDes = view.findViewById(R.id.txtDese);
+                EditText CantidadAct= view.findViewById(R.id.txtAct);
+                EditText turl = view.findViewById(R.id.txtImage);
+                Button btnUpdate = view. findViewById(R.id.btnUpdate);
 
-                EditText nombre = view.findViewById(R.id.txtName);
-                EditText cantidadDes = view.findViewById(R.id.txtDese);
-                EditText cantidadAct = view.findViewById(R.id.txtAct);
-                EditText tulr =view.findViewById(R.id.txtImage);
-
-                Button btnUpdate= view.findViewById(R.id.btnUpdate);
-
-                nombre.setText(model.getNombre());
-                cantidadDes.setText(String.valueOf(model.getCantidadDes()));
-                cantidadAct.setText(String.valueOf(model.getCantidadAct()));
-                tulr.setText(model.getTulr());
+                name.setText(model.getNombre());
+                CantidadDes.setText(model.getCantidadDes());
+                CantidadAct.setText(model.getCantidadAct());
+                turl.setText(model.getTulr());
 
                 dialogPlus.show();
-
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v) {
-                        Map<String,Object> map = new HashMap<>();
-                        map.put("nombre",nombre.getText().toString());
-                        map.put("CantidadDes", cantidadDes.getText().toString());
-                        map.put("CantidadAct",cantidadAct.getText().toString());
-                        map.put("tulr",tulr.getText().toString());
-
+                    public void onClick(View view) {
+                        Map<String, Object> map = new HashMap<>();
+                        map.put("name",name.getText().toString());
+                        map.put("CantidadAct", CantidadAct.getText().toString());
+                        map.put("CantidadDes",CantidadDes.getText().toString());
+                        map.put("turl",turl.getText().toString());
                         FirebaseDatabase.getInstance().getReference().child("Inventario")
-                                .child(getRef(position) .getKey()).updateChildren(map)
+                                .child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>(){
                                     @Override
                                     public void onSuccess(Void unused){
-                                        Toast.makeText(holder.nombre.getContext(),"Datos Actualizados Correctamente",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(holder.nombre.getContext(),"Los datos se actualizaron",Toast.LENGTH_SHORT).show();
                                         dialogPlus.dismiss();
                                     }
-                                })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(Exception e) {
-                                Toast.makeText(holder.nombre.getContext(),"Error al actualizar  ",Toast.LENGTH_SHORT).show();
-                                dialogPlus.dismiss();
-
-                            }
-                        });
-                    }
-                });
-            }
-
-        });
-        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(holder.nombre.getContext());
-                builder.setTitle("¿Esta seguro?");
-                builder.setMessage("Datos eliminados no pueden ser recuperados");
-
-                builder.setPositiveButton("Eliminar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int which) {
-                        FirebaseDatabase.getInstance().getReference().child("Inventario")
-                                .child(getRef(position).getKey()).removeValue();
-
-                    }
-                });
-
-                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int which) {
-                        Toast.makeText(holder.nombre.getContext(), "Cancelado", Toast.LENGTH_SHORT).show();
+                                    })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(Exception e) {
+                                        Toast.makeText(holder.nombre.getContext(),"Los datos se NO actualizaron",Toast.LENGTH_SHORT).show();
+                                        dialogPlus.dismiss();
+                                    }
+                                });
                     }
                 });
             }
         });
+
     }
+
     @NonNull
     @Override
-    public myviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public mainAdapterOrg.myviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.main_itemorg,parent,false);
-        return new myviewHolder(view);
+        return new mainAdapterOrg.myviewHolder(view);
     }
 
     class myviewHolder extends RecyclerView.ViewHolder{
-        CircleImageView tulr;
-        TextView nombre, cantidadDes,cantidadAct;
+        CircleImageView img;
+        TextView nombre, cantidadDese,cantidadAct;
 
-        Button btnEdit,btnDelete;
+        Button btnEdit, btnDelete;
 
         public myviewHolder(@Nonnull View itemView){
             super(itemView);
 
-            tulr= (CircleImageView)itemView.findViewById(R.id.img1);
+            img= (CircleImageView)itemView.findViewById(R.id.img1);
             nombre = (TextView)itemView.findViewById(R.id.producto);
-            cantidadDes =(TextView)itemView.findViewById(R.id.CantidadDese);
+            cantidadDese =(TextView)itemView.findViewById(R.id.CantidadDese);
             cantidadAct =(TextView)itemView.findViewById(R.id.CantidadAct);
-
-            btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
+            btnEdit = (Button)itemView.findViewById(R.id.btnEdit);
             btnDelete = (Button) itemView.findViewById(R.id.btnDelete);
+
         }
 
     }
 
+
 }
+

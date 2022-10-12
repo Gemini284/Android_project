@@ -39,8 +39,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/producto"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/textoCantidadD"
-            android:text=""
+            android:layout_toRightOf="@id/txtCantidadDese"
+            android:text=" "
             android:textColor="#000"
             android:textSize="25sp" />
 
@@ -51,7 +51,7 @@
             android:layout_below="@id/CantidadDese"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/Actnombre"
-            android:text=""
+            android:text=" "
             android:textColor="#000"
             android:textSize="25sp" />
 
@@ -68,7 +68,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textoCantidadD"
+            android:id="@+id/txtCantidadDese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/producto"
@@ -90,7 +90,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/btn_bg"
-                android:text="Edit"
+                android:text="Editar"
                 android:textAllCaps="false"
                 android:id="@+id/btnEdit"/>
             <Button
@@ -98,7 +98,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/btn_bg"
-                android:text="Delete"
+                android:text="Eliminar"
                 android:textAllCaps="false"
                 android:id="@+id/btnDelete"/>
         </LinearLayout>

@@ -71,7 +71,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/editInven" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -132,7 +132,7 @@
         android:layout_marginBottom="12dp"
         android:background="#FFFFFF"
         android:text="Buscar Usuarios"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/editInven"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/bttnEvento" />
@@ -173,14 +173,14 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="17dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/editInven"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@android:drawable/ic_menu_day"
         tools:srcCompat="@drawable/basket" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/editInven"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="121dp"

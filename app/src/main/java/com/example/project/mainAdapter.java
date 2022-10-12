@@ -37,8 +37,8 @@ public class mainAdapter extends FirebaseRecyclerAdapter<MainModel,mainAdapter.m
     protected void onBindViewHolder(@NonNull myviewHolder holder, int position, @NonNull MainModel model) {
 
         holder.nombre.setText(model.getNombre());
-        holder.cantidadAct.setText(String.valueOf(model.getCantidadAct()));
-        holder.cantidadDese.setText(String.valueOf(model.getCantidadDes()));
+        holder.cantidadAct.setText(model.getCantidadAct());
+        holder.cantidadDese.setText(model.getCantidadDes());
 
         Glide.with(holder.img.getContext())
                 .load(model.getTulr())

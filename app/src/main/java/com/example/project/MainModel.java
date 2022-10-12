@@ -1,32 +1,33 @@
 package com.example.project;
 
 public class MainModel {
-    int CantidadAct, CantidadDes;
+    String CantidadAct;
+    String CantidadDes;
     String nombre, tulr;
 
     MainModel(){
 
     }
-    public MainModel(int cantidadAct, int cantidadDes, String nombre, String tulr) {
-        CantidadAct = cantidadAct;
-        CantidadDes = cantidadDes;
+    public MainModel(String cantidadAct, String cantidadDes, String nombre, String tulr) {
+        this.CantidadAct = cantidadAct;
+        this.CantidadDes = cantidadDes;
         this.nombre = nombre;
         this.tulr = tulr;
     }
 
-    public int getCantidadAct() {
+    public String getCantidadAct() {
         return CantidadAct;
     }
 
-    public void setCantidadAct(int cantidadAct) {
+    public void setCantidadAct(String cantidadAct) {
         CantidadAct = cantidadAct;
     }
 
-    public int getCantidadDes() {
+    public String getCantidadDes() {
         return CantidadDes;
     }
 
-    public void setCantidadDes(int cantidadDes) {
+    public void setCantidadDes(String cantidadDes) {
         CantidadDes = cantidadDes;
     }
 
