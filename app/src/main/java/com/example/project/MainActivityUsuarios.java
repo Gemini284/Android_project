@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.View;
+import android.widget.Button;
 
 import com.example.project.adapter.AdapterUsuario;
 import com.example.project.bd.Usuario;
@@ -24,7 +27,10 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 
+
 public class MainActivityUsuarios extends AppCompatActivity {
+
+    Button siguiente;
 
         DatabaseReference ref;
         ArrayList<Usuario> list;
@@ -34,10 +40,22 @@ public class MainActivityUsuarios extends AppCompatActivity {
         LinearLayoutManager lm;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_usuarios);
+
+        siguiente = (Button) findViewById(R.id.alimentosbtton);
+
+        siguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent siguiente = new Intent(MainActivityUsuarios.this, Activity_Organizacion.class);
+                startActivity(siguiente);
+            }
+        });
 
         ref = FirebaseDatabase.getInstance().getReference().child("Usuarios");
         rv = findViewById(R.id.rv);
