@@ -10,7 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
 import com.google.firebase.firestore.auth.User
+import com.google.firebase.ktx.Firebase
 
 class Activity_Donador : AppCompatActivity() {
     private lateinit var  binding: ActivityProfileBinding
@@ -18,6 +20,7 @@ class Activity_Donador : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var databaseReference: DatabaseReference
     private lateinit var user: User
+    private var nombre = "pepe"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +60,7 @@ class Activity_Donador : AppCompatActivity() {
         }
 
         binding.email.text = firebaseAuth.currentUser?.email.toString()
+        muestraNombre()
         //binding.Nombre.text = nombre
 
     }
@@ -72,4 +76,17 @@ class Activity_Donador : AppCompatActivity() {
         }
     }
 
+    private fun muestraNombre(){
+
+        databaseReference = Firebase.database.getReference("Usuarios")
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser?.uid
+        if (uid != null) {
+            databaseReference.child(uid).child("Nombre").get().addOnSuccessListener {
+                binding.Nombre.text = it.value.toString()
+            }.addOnFailureListener{
+                Log.e("firebase", "Error getting data", it)
+            }
+        }
+    }
 }
