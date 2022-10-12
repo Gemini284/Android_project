@@ -73,11 +73,6 @@
             android:name=".Activity_Empresa"
             android:exported="false" />
         <activity
-            android:name=".Buscar_Usuario"
-            android:exported="false"
-            android:label="@string/title_activity_buscar_usuario"
-            android:theme="@style/Theme.Project.NoActionBar" />
-        <activity
             android:name=".EmpresasAliadas"
             android:exported="false" />
         <activity
