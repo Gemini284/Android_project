@@ -1,4 +1,6 @@
-package com.example.project.bd;
+package com.example.project.pojo;
+
+// Nuestra clase objeto de nuestra base da datos que tenemos en firebase
 
 public class Usuario {
     private String email;
@@ -12,6 +14,8 @@ public class Usuario {
         this.nombre = nombre;
     }
 
+
+    // Getters y setters para llamarlos desde el adaptador
     public String getEmail() {
         return email;
     }

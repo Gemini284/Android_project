@@ -15,17 +15,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.project.adapter.AdapterUsuario;
-import com.example.project.bd.Usuario;
+import com.example.project.pojo.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.ktx.Firebase;
 
 import java.util.ArrayList;
-import java.util.Locale;
-
 
 
 public class MainActivityUsuarios extends AppCompatActivity {
@@ -87,6 +84,7 @@ public class MainActivityUsuarios extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+
                 return false;
             }
 
@@ -110,7 +108,6 @@ public class MainActivityUsuarios extends AppCompatActivity {
         }
         AdapterUsuario adapter = new AdapterUsuario(milista);
         rv.setAdapter(adapter);
-
     }
 
 }
