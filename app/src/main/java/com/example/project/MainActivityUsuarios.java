@@ -1,6 +1,6 @@
 package com.example.project;
 
-
+// Conexion con Firebase
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -12,7 +12,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.project.adapter.AdapterUsuario;
 import com.example.project.pojo.Usuario;
@@ -26,8 +25,6 @@ import java.util.ArrayList;
 
 
 public class MainActivityUsuarios extends AppCompatActivity {
-
-    Button siguiente;
 
         DatabaseReference ref;
         ArrayList<Usuario> list;
@@ -43,17 +40,6 @@ public class MainActivityUsuarios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_usuarios);
 
-        siguiente = (Button) findViewById(R.id.alimentosbtton);
-
-        siguiente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent siguiente = new Intent(MainActivityUsuarios.this, Activity_Organizacion.class);
-                startActivity(siguiente);
-            }
-        });
-
         ref = FirebaseDatabase.getInstance().getReference().child("Usuarios");
         rv = findViewById(R.id.rv);
         searchView = findViewById(R.id.search);
@@ -63,6 +49,7 @@ public class MainActivityUsuarios extends AppCompatActivity {
         adapter = new AdapterUsuario(list);
         rv.setAdapter(adapter);
 
+        // Pasando la informacion a la lista que creamos, sacando los datos de firebase
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -81,6 +68,7 @@ public class MainActivityUsuarios extends AppCompatActivity {
             }
         });
 
+        // busqueda en tiempo real
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
