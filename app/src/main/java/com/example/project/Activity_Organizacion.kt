@@ -16,6 +16,14 @@ class Activity_Organizacion : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_organizacion)
+
+        val buttonBuscarUsuarios : Button = findViewById(R.id.alimentosbtton)
+        buttonBuscarUsuarios.setOnClickListener {
+
+            val intent : Intent = Intent(this, MainActivityUsuarios::class.java)
+            startActivity(intent)
+        }
 
         firebaseAuth = FirebaseAuth.getInstance()
         binding = ActivityOrganizacionBinding.inflate(layoutInflater)
