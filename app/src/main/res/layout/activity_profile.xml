@@ -124,7 +124,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/alimentosbtton"
+        android:id="@+id/buscarUsuario"
         android:layout_width="141dp"
         android:layout_height="58dp"
         android:layout_marginStart="135dp"

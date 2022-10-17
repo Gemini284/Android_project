@@ -3,9 +3,7 @@ package com.example.project
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 import com.example.project.databinding.ActivityOrganizacionBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -18,13 +16,6 @@ class Activity_Organizacion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_organizacion)
 
-        val buttonBuscarUsuarios : Button = findViewById(R.id.alimentosbtton)
-        buttonBuscarUsuarios.setOnClickListener {
-
-            val intent : Intent = Intent(this, MainActivityUsuarios::class.java)
-            startActivity(intent)
-        }
-
         firebaseAuth = FirebaseAuth.getInstance()
         binding = ActivityOrganizacionBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -33,8 +24,13 @@ class Activity_Organizacion : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
         }
+        binding.buscarUsuario.setOnClickListener {
+            startActivity(Intent(this, MainActivityUsuarios::class.java))
+        }
         binding.editInven.setOnClickListener {
             startActivity(Intent(this, productosOrg::class.java))
+
+
         }
     }
 
