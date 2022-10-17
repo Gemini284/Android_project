@@ -29,8 +29,9 @@ class Activity_Organizacion : AppCompatActivity() {
         }
         binding.editInven.setOnClickListener {
             startActivity(Intent(this, productosOrg::class.java))
-
-
+        }
+        binding.CrearORG.setOnClickListener {
+            startActivity(Intent(this, EmpresasAliadas::class.java))
         }
     }
 
