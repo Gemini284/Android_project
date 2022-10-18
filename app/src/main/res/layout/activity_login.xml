@@ -11,14 +11,14 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="22dp"
         android:text="Iniciar sesión"
         android:textColor="#000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintBottom_toTopOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -31,18 +31,16 @@
         app:srcCompat="@drawable/img" />
 
     <Button
-        android:id="@+id/Inicio"
+        android:id="@+id/bttnInicio"
         android:layout_width="130dp"
         android:layout_height="76dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/btn_bg"
         android:text="Iniciar Sesión"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_password"
-        app:layout_constraintVertical_bias="0.482" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -60,49 +58,62 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginStart="52dp"
         android:text="¿Olvidaste tu contraseña?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/forgottenPass"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/forgottenPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#00E91E63"
+        android:text="Pica aqui!"
+        android:textColor="#E91E47"
+        app:layout_constraintBottom_toTopOf="@+id/textView_register_now"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="50dp"
         android:text="¿No tienes una cuenta?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView_register_now"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView_register_now"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="70dp"
         android:layout_marginStart="89dp"
         android:layout_marginEnd="88dp"
         android:text="Registrate aqui"
         android:textColor="#C61438"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/Inicio"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/forgotbtn" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="43dp"
+        android:layout_marginTop="264dp"
         android:text="Correo Eléctronico"
         android:textColor="#C61438"
-        app:layout_constraintBottom_toBottomOf="@+id/editText_email"
-        app:layout_constraintStart_toStartOf="@+id/editText_email" />
+        app:layout_constraintStart_toStartOf="@+id/editText_email"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:text="Contraseña"
         android:textColor="#C61438"
         app:layout_constraintBottom_toTopOf="@+id/editText_password"
@@ -110,30 +121,36 @@
 
     <EditText
         android:id="@+id/editText_email"
-        android:layout_width="371dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
 
     <EditText
         android:id="@+id/editText_password"
-        android:layout_width="371dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="125dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="#020202"
         android:textColorHint="#78909C"
+        app:layout_constraintBottom_toBottomOf="@+id/forgotbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
 

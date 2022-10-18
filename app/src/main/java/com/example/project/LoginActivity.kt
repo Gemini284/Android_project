@@ -79,9 +79,12 @@ class LoginActivity : AppCompatActivity() {
             binding.textViewRegisterNow.setOnClickListener {
                 startActivity(Intent(this, RegistrarActivity::class.java))
             }
-            binding.Inicio.setOnClickListener{
+            binding.bttnInicio.setOnClickListener{
                 //antes del login, valida
                 validateData()
+            }
+            binding.forgottenPass.setOnClickListener {
+                startActivity(Intent(this,ForgottenPassword::class.java));
             }
         }
         private fun validateData(){
@@ -116,7 +119,6 @@ class LoginActivity : AppCompatActivity() {
 
                 }
         }
-
     }
 
 

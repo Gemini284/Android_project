@@ -49,7 +49,7 @@ class Activity_Donador : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
         }
-        binding.alimentosbtton.setOnClickListener {
+        binding.alimentosbttn.setOnClickListener {
             startActivity(Intent(this, Productos::class.java))
         }
         binding.bttnEvento.setOnClickListener {
