@@ -117,6 +117,7 @@
         android:layout_marginEnd="135dp"
         android:layout_marginBottom="225dp"
         android:background="@drawable/blue_bg"
+        android:onClick="irEventos"
         android:text="Eventos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

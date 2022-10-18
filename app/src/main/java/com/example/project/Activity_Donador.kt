@@ -89,4 +89,8 @@ class Activity_Donador : AppCompatActivity() {
             }
         }
     }
+    fun irEventos(v: View?) {
+        val intent = Intent(this, BuscarEventoDonador::class.java)
+        startActivity(intent)
+    }
 }

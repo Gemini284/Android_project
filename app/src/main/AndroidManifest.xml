@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".BorrarEventoOrg"
+            android:exported="false" />
+        <activity
             android:name=".ForgottenPassword"
             android:exported="false" />
         <activity
