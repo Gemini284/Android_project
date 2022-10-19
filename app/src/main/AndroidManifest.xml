@@ -28,7 +28,8 @@
             android:exported="false" />
         <activity
             android:name=".mainAdapterOrg"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -83,6 +84,9 @@
             android:exported="false" />
         <activity
             android:name=".RegistrarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".donacion"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

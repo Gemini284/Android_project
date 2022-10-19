@@ -25,9 +25,6 @@ class Activity_Organizacion : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
         }
-        binding.buscarUsuario.setOnClickListener {
-            startActivity(Intent(this, MainActivityUsuarios::class.java))
-        }
         binding.editInven.setOnClickListener {
             startActivity(Intent(this, productosOrg::class.java))
         }
