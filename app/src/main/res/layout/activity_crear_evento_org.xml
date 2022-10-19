@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2975B1"
+    android:background="#EFF2F4"
     tools:context=".CrearEvento_ORG">
 
     <ImageView
@@ -71,6 +71,7 @@
         android:layout_width="181dp"
         android:layout_height="0dp"
         android:layout_marginBottom="116dp"
+        android:backgroundTint="#00BCD4"
         android:text="Crear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
