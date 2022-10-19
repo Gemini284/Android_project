@@ -21,4 +21,10 @@ class Evento_ORG : AppCompatActivity() {
         val intent = Intent(this,BorrarEventoOrg::class.java)
         startActivity(intent)
     }
+
+
+    fun editarEvento(v: View?){
+        val intent = Intent(this,EditarEventoOrg::class.java)
+        startActivity(intent)
+    }
 }

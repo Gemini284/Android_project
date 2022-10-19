@@ -3,6 +3,7 @@ package com.example.project
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -14,7 +15,6 @@ import com.google.firebase.database.*
 class BorrarEventoOrg : AppCompatActivity() {
 
     lateinit var binding : ActivityBorrarEventoOrgBinding
-
     lateinit var dbRef: DatabaseReference
     lateinit var eventRecyclerView: RecyclerView
     lateinit var eventArrayList: ArrayList<Event>
@@ -22,6 +22,7 @@ class BorrarEventoOrg : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityBorrarEventoOrgBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_buscar_evento_donador)
 
         eventRecyclerView = findViewById(R.id.EventList)
@@ -33,9 +34,10 @@ class BorrarEventoOrg : AppCompatActivity() {
         getEventData()
 
         binding.borrar.setOnClickListener{
-            var ID = binding.Fecha.text.toString()
-            if(ID.isEmpty())
-                deleteData(ID)
+
+            var iD = binding.Fecha.text.toString()
+            if(iD.isEmpty())
+                deleteData(iD)
             else
                 Toast.makeText(this,"Escriba el id del evento", Toast.LENGTH_SHORT).show()
 
@@ -45,9 +47,9 @@ class BorrarEventoOrg : AppCompatActivity() {
     }
 
 
-    private fun deleteData(ID: String){
+    private fun deleteData(iD: String){
         dbRef = FirebaseDatabase.getInstance().getReference("Eventos")
-        dbRef.child(ID).removeValue().addOnSuccessListener {
+        dbRef.child(iD).removeValue().addOnSuccessListener {
             Toast.makeText(this,"El evento se ha borrado",Toast.LENGTH_SHORT).show()
         }.addOnFailureListener{
             Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
