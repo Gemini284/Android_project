@@ -43,6 +43,9 @@ class RegistrarActivity : AppCompatActivity() {
         binding.SignupBttn.setOnClickListener{
             validateData()
         }
+        binding.bttnInicio.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
 
     }
 

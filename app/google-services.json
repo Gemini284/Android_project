@@ -8,6 +8,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:733535784724:android:d9d7039333780a04b03c01",
+        "android_client_info": {
+          "package_name": "com.example.foodbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733535784724-3b8351kttp0fet0q4jpll1s4k97i9jnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSNyt_WcKI-4axZjBSLYor1uXVGfH4LDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733535784724-3b8351kttp0fet0q4jpll1s4k97i9jnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:733535784724:android:320df37606edd4f4b03c01",
         "android_client_info": {
           "package_name": "com.example.project"

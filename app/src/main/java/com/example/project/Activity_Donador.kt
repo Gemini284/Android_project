@@ -3,8 +3,6 @@ package com.example.project
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityProfileBinding
@@ -58,7 +56,9 @@ class Activity_Donador : AppCompatActivity() {
         binding.bttnPuntos.setOnClickListener{
             startActivity(Intent(this, PuntoRecoleccionActivity::class.java))
         }
-
+        binding.CrearORG.setOnClickListener {
+            startActivity(Intent(this, Donacion::class.java))
+        }
         binding.email.text = firebaseAuth.currentUser?.email.toString()
         muestraNombre()
         //binding.Nombre.text = nombre
