@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,18 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
-        <activity
-            android:name=".BorrarEventoOrg"
-            android:exported="false" />
-        <activity
-            android:name=".ForgottenPassword"
-            android:exported="false" />
-        <activity
-            android:name=".AddActivity"
-            android:exported="false" />
-        <activity
-            android:name=".mainAdapterOrg"
-            android:exported="false" />
+
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -44,6 +34,18 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCDVVm03yXuhCmvQxsW166VsDm1vd2RRR0" />
 
+        <activity
+            android:name=".BorrarEventoOrg"
+            android:exported="false" />
+        <activity
+            android:name=".ForgottenPassword"
+            android:exported="false" />
+        <activity
+            android:name=".AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainAdapterOrg"
+            android:exported="false" />
         <activity
             android:name=".PuntoRecoleccionActivity"
             android:exported="false">
