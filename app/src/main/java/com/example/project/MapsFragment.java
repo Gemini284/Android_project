@@ -36,7 +36,7 @@ public class MapsFragment extends Fragment {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
 
-    //vars
+    //hola estoy es un camnbio jajajajjs asladuaos
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
