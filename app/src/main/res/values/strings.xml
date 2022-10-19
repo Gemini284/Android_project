@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project</string>
+    <string name="app_name">Banco de Alimentos</string>
     <string name="title_activity_buscar_usuario">buscarUsuario</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
