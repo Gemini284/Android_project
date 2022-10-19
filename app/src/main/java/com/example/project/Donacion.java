@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Donacion extends AppCompatActivity {
+public class donacion extends AppCompatActivity {
 
     EditText nombre;
     EditText cantidad;
@@ -46,6 +46,6 @@ public class Donacion extends AppCompatActivity {
 
         donacionesDBRef.push().setValue(Donacion);
 
-        Toast.makeText(com.example.project.Donacion.this, "Donacion recibida", Toast.LENGTH_SHORT).show();
+        Toast.makeText(donacion.this, "Donacion recibida", Toast.LENGTH_SHORT).show();
     }
 }

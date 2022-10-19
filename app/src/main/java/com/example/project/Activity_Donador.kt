@@ -58,7 +58,7 @@ class Activity_Donador : AppCompatActivity() {
             startActivity(Intent(this, PuntoRecoleccionActivity::class.java))
         }
         binding.CrearORG.setOnClickListener {
-            startActivity(Intent(this, Donacion::class.java))
+            startActivity(Intent(this, donacion::class.java))
         }
         binding.email.text = firebaseAuth.currentUser?.email.toString()
         muestraNombre()
