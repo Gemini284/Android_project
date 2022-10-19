@@ -77,9 +77,6 @@
             android:name=".Evento_Usuario"
             android:exported="false" />
         <activity
-            android:name=".Activity_Empresa"
-            android:exported="false" />
-        <activity
             android:name=".EmpresasAliadas"
             android:exported="false" />
         <activity
