@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nombre"
         app:srcCompat="@drawable/usuario"
-        tools:srcCompat="@drawable/img" />
+        tools:srcCompat="@drawable/no" />
 
     <TextView
         android:id="@+id/textView_empresa"
