@@ -16,4 +16,9 @@ class Evento_ORG : AppCompatActivity() {
         val intent = Intent(this,CrearEvento_ORG::class.java)
         startActivity(intent)
     }
+
+    fun borrarEvento(v: View?){
+        val intent = Intent(this,BorrarEventoOrg::class.java)
+        startActivity(intent)
+    }
 }

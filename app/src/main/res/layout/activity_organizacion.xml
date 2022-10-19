@@ -116,6 +116,7 @@
         android:layout_marginEnd="124dp"
         android:layout_marginBottom="52dp"
         android:background="@drawable/blue_bg"
+        android:onClick="irEventoORG"
         android:text="Eventos"
         app:layout_constraintBottom_toBottomOf="@+id/buscarUsuario"
         app:layout_constraintEnd_toEndOf="parent"
