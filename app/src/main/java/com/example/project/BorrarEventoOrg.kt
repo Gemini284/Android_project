@@ -23,7 +23,7 @@ class BorrarEventoOrg : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBorrarEventoOrgBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_buscar_evento_donador)
+        setContentView(binding.root)
 
         eventRecyclerView = findViewById(R.id.EventList)
         btnDelete = findViewById(R.id.borrar)
@@ -35,9 +35,9 @@ class BorrarEventoOrg : AppCompatActivity() {
 
         binding.borrar.setOnClickListener{
 
-            var iD = binding.Fecha.text.toString()
-            if(iD.isEmpty())
-                deleteData(iD)
+            var eventID = binding.Fecha.text.toString()
+            if(eventID.isEmpty())
+                deleteData(eventID)
             else
                 Toast.makeText(this,"Escriba el id del evento", Toast.LENGTH_SHORT).show()
 
@@ -47,9 +47,9 @@ class BorrarEventoOrg : AppCompatActivity() {
     }
 
 
-    private fun deleteData(iD: String){
+    private fun deleteData(eventID: String){
         dbRef = FirebaseDatabase.getInstance().getReference("Eventos")
-        dbRef.child(iD).removeValue().addOnSuccessListener {
+        dbRef.child(eventID).removeValue().addOnSuccessListener {
             Toast.makeText(this,"El evento se ha borrado",Toast.LENGTH_SHORT).show()
         }.addOnFailureListener{
             Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
