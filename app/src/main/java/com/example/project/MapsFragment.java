@@ -34,9 +34,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MapsFragment extends Fragment {
 
     private static final String TAG = "MapActivity";
@@ -90,9 +87,10 @@ public class MapsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_maps, container, false);
 
-        //Conexion Firebase
+        //Creacion de pines desde firebase
         getSavedLocations();
 
+        //Obtiene ubicacion actual
         getLocationPermission();
 
         return view;
@@ -124,8 +122,7 @@ public class MapsFragment extends Fragment {
                             Log.d(TAG, "onComplete: found location!");
                             Location currentLocation = (Location) task.getResult();
 
-                            moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
-                                    DEFAULT_ZOOM);
+                            moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()), 10.5f);
 
                         }else{
                             Log.d(TAG, "onComplete: current location is null");
