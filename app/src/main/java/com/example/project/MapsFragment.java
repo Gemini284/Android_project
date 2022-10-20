@@ -23,23 +23,33 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MapsFragment extends Fragment {
-
-    FusedLocationProviderClient client;
-    LatLng current;
 
     private static final String TAG = "MapActivity";
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
 
-    //hola estoy es un camnbio jajajajjs asladuaos
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
+
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+    private DatabaseReference locsRef = mDatabase.child("Locaciones");
+
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -54,7 +64,7 @@ public class MapsFragment extends Fragment {
          */
         @Override
         public void onMapReady(GoogleMap googleMap) {
-            Toast.makeText(getActivity(), "Map is Ready", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Cargando Mapa...", Toast.LENGTH_SHORT).show();
             Log.d(TAG, "onMapReady: map is ready");
             mMap = googleMap;
 
@@ -79,6 +89,9 @@ public class MapsFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_maps, container, false);
+
+        //Conexion Firebase
+        getSavedLocations();
 
         getLocationPermission();
 
@@ -127,7 +140,7 @@ public class MapsFragment extends Fragment {
     }
 
     private void moveCamera(LatLng latLng, float zoom){
-        Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude );
+        Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
     }
 
@@ -172,4 +185,33 @@ public class MapsFragment extends Fragment {
             }
         }
     }
+
+    private void getSavedLocations(){
+        locsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot ds : snapshot.getChildren()){
+                    float latitude = ds.child("lat").getValue(float.class);
+                    float longitude = ds.child("lng").getValue(float.class);
+                    String name = ds.child("name").getValue(String.class);
+                    LatLng pinLocation = new LatLng(latitude, longitude);
+                    makePin(pinLocation, name);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.d(TAG, "getSavedLocations: No se pudieron obtener los datos");
+            }
+        });
+    }
+
+    private void makePin(LatLng pinLocation, String name) {
+        mMap.addMarker(new MarkerOptions()
+                .position(pinLocation)
+                .title(name)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+        );
+    }
+
 }
