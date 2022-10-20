@@ -19,8 +19,8 @@
             android:layout_height="80dp"
             android:layout_centerVertical="true"
             android:src="@mipmap/ic_launcher"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp" />
+            app:civ_border_color="@color/black"
+            app:civ_border_width="1dp" />
 
 
         <TextView
@@ -30,9 +30,9 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
             android:text="Producto"
-            android:textColor="#000"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"/>
 
         <TextView
             android:id="@+id/CantidadDese"
@@ -42,20 +42,18 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/textoCantidadD"
             android:text=""
-            android:textColor="#000"
-            android:textSize="25sp"
+            android:textColor="@color/black"
             />
 
         <TextView
             android:id="@+id/CantidadAct"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/CantidadDese"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/Actnombre"
             android:text=""
-            android:textColor="#000"
-            android:textSize="25sp"
+            android:textColor="@color/black"
              />
 
         <TextView
@@ -63,11 +61,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/CantidadDese"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
             android:text="Cantidad Actual:"
             android:textColor="#000"
-            android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
@@ -78,8 +75,7 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
             android:text="Cantidad deseada:"
-            android:textColor="#000"
-            android:textSize="25sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
         <LinearLayout
             android:layout_width="match_parent"
