@@ -74,6 +74,9 @@
             android:name=".Evento_ORG"
             android:exported="false" />
         <activity
+            android:name=".EditarEventoOrg"
+            android:exported="false" />
+        <activity
             android:name=".Evento_Usuario"
             android:exported="false" />
         <activity
