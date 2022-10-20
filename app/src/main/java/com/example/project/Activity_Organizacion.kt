@@ -31,6 +31,9 @@ class Activity_Organizacion : AppCompatActivity() {
         binding.CrearORG.setOnClickListener {
             startActivity(Intent(this, EmpresasAliadas::class.java))
         }
+        binding.bttnPuntos.setOnClickListener{
+            startActivity(Intent(this, PuntoRecoleccionActivity::class.java))
+        }
     }
 
     private fun checkUser() {
