@@ -52,8 +52,7 @@ class BuscarEventoDonador : AppCompatActivity() {
         })
     }
     fun Regresar(v: View?) {
-        val intent = Intent(this, Evento_Usuario::class.java)
-        startActivity(intent)
+        finish();
     }
 
 }

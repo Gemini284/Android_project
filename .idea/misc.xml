@@ -15,7 +15,10 @@
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/drawable/rounded.xml" value="0.195" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_add.xml" value="0.1578125" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_borrar_evento_org.xml" value="0.16" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_buscar_evento_donador.xml" value="0.19270833333333334" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_crear_evento_org.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_donacion.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_editar_evento_org.xml" value="0.19270833333333334" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_empresa.xml" value="0.20923913043478262" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_evento_org.xml" value="0.15208333333333332" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_forgotten_password.xml" value="0.16822916666666668" />
@@ -26,6 +29,7 @@
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_productos2.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_profile.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/activity_registrar.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/event_item.xml" value="0.16" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/main_item.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/main_itemorg.xml" value="0.4" />
         <entry key="..\:/Users/sopib/Downloads/Android_project/app/src/main/res/layout/productosorg.xml" value="0.1953125" />
