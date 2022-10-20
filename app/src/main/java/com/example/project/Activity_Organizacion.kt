@@ -37,6 +37,9 @@ class Activity_Organizacion : AppCompatActivity() {
         binding.bttnPuntos.setOnClickListener{
             startActivity(Intent(this, PuntoRecoleccionActivity::class.java))
         }
+        binding.bttnEvento.setOnClickListener {
+            startActivity(Intent(this, Evento_ORG::class.java))
+        }
     }
 
     private fun checkUser() {

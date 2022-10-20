@@ -128,7 +128,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_other"
-        android:onClick="irEventoORG"
         android:text="Eventos"
         app:layout_constraintEnd_toEndOf="@+id/bttnPuntos"
         app:layout_constraintHorizontal_bias="0.0"
