@@ -8,18 +8,21 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="411dp"
-        android:layout_height="152dp"
-        android:padding="15dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
 
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
             android:src="@mipmap/ic_launcher"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp" />
+            app:civ_border_color="@color/black"
+            app:civ_border_width="1dp" />
 
 
         <TextView
@@ -29,42 +32,45 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
             android:text="Producto"
-            android:textColor="#000"
-            android:textSize="25sp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/red"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/CantidadDese"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/producto"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/txtCantidadDese"
             android:text=" "
-            android:textColor="#000"
-            android:textSize="25sp" />
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/CantidadAct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/CantidadDese"
+            android:layout_below="@+id/txtCantidadDese"
+            android:layout_alignBottom="@+id/Actnombre"
+            android:layout_marginStart="14dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/Actnombre"
             android:layout_toRightOf="@id/Actnombre"
             android:text=" "
-            android:textColor="#000"
-            android:textSize="25sp" />
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/Actnombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/CantidadDese"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="3dp"
             android:layout_toRightOf="@id/img1"
             android:text="Cantidad Actual:"
-            android:textColor="#000"
-            android:textSize="25sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <TextView
@@ -75,32 +81,39 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/img1"
             android:text="Cantidad deseada:"
-            android:textColor="#000"
-            android:textSize="25sp"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/Actnombre"
-            android:orientation="horizontal">
+            android:layout_below="@id/img1"
+            android:layout_alignStart="@+id/Actnombre"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
 
             <Button
-                android:layout_width="173dp"
-                android:layout_height="match_parent"
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/btn_bg"
                 android:text="Editar"
-                android:textAllCaps="false"
-                android:id="@+id/btnEdit"/>
+                android:textAllCaps="false" />
+
             <Button
-                android:layout_width="173dp"
-                android:layout_height="match_parent"
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/btn_bg"
                 android:text="Eliminar"
-                android:textAllCaps="false"
-                android:id="@+id/btnDelete"/>
+                android:textAllCaps="false" />
         </LinearLayout>
 
 
