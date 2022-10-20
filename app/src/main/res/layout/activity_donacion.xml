@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="227dp"
-        android:text="Account Number"
+        android:text="Número de cuenta"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/view"
