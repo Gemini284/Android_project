@@ -24,6 +24,8 @@ public class donacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donacion);
 
+        getSupportActionBar().setTitle("Donación");
+
         nombre = findViewById(R.id.txtNombre);
         cantidad = findViewById(R.id.txtCant);
         btnInsert = findViewById(R.id.Confirmar);

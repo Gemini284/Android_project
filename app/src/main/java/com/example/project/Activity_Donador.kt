@@ -27,7 +27,7 @@ class Activity_Donador : AppCompatActivity() {
         setContentView(binding.root)
 
         actionBar = supportActionBar!!
-        actionBar.title = "Profile"
+        actionBar.title = "Perfil"
         firebaseAuth = FirebaseAuth.getInstance()
         checkUser()
         /*al uid = firebaseAuth.currentUser?.uid

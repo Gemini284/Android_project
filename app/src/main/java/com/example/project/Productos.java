@@ -26,6 +26,8 @@ public class Productos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos2);
 
+        getSupportActionBar().setTitle("Productos");
+
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
