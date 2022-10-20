@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Agregar"
-        android:background="@color/purple_500"
+        android:background="@color/red"
         android:textSize="25dp"
         android:gravity="center"
         android:textColor="#FFF"/>

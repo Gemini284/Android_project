@@ -9,158 +9,136 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="99dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginBottom="12dp"
+        android:layout_height="66dp"
         app:layout_constraintBottom_toTopOf="@+id/Nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808"
         app:srcCompat="@drawable/usuario" />
 
     <TextView
         android:id="@+id/Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="17dp"
         android:text="hola"
-        android:textColor="#C61438"
+        android:textAlignment="center"
+        android:textColor="@color/red"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/email"
-        app:layout_constraintEnd_toEndOf="@+id/email"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/bttnPuntos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/blue_bg"
+        android:layout_width="155dp"
+        android:layout_height="66dp"
+        android:background="@drawable/btn_other"
         android:text=" Puntos de recoleccón"
         app:layout_constraintBottom_toTopOf="@+id/bttnEvento"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CrearORG" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toStartOf="@+id/bttnPuntos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:srcCompat="@drawable/icono_puntos" />
+        android:layout_width="114dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="@+id/bttnPuntos"
+        app:srcCompat="@drawable/icono_puntos"
+        tools:layout_editor_absoluteY="342dp" />
 
     <Button
         android:id="@+id/CrearORG"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/blue_bg"
+        android:layout_width="155dp"
+        android:layout_height="66dp"
+        android:background="@drawable/btn_other"
         android:text="Donar"
-        app:layout_constraintBottom_toTopOf="@+id/bttnPuntos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="260dp" />
 
     <Button
         android:id="@+id/bttnEvento"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="27dp"
-        android:background="@drawable/blue_bg"
+        android:layout_width="155dp"
+        android:layout_height="66dp"
+        android:background="@drawable/btn_other"
         android:onClick="irEventos"
         android:text="Eventos"
-        app:layout_constraintBottom_toTopOf="@+id/alimentosbttn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
-        app:layout_constraintTop_toBottomOf="@+id/bttnPuntos" />
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="433dp" />
 
     <Button
         android:id="@+id/alimentosbttn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginBottom="140dp"
-        android:background="@drawable/blue_bg"
+        android:layout_width="155dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_other"
         android:text="Alimentos requeridos"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bttnEvento" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toStartOf="@+id/CrearORG"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="114dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="144dp"
+        app:layout_constraintEnd_toEndOf="@+id/CrearORG"
         app:srcCompat="@drawable/icono_donacion"
+        tools:layout_editor_absoluteY="260dp"
         tools:srcCompat="@drawable/icono_donacion" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView11"
-        app:layout_constraintEnd_toStartOf="@+id/bttnEvento"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        android:layout_width="108dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="140dp"
+        app:layout_constraintEnd_toEndOf="@+id/bttnEvento"
         app:srcCompat="@drawable/icono_eventos"
+        tools:layout_editor_absoluteY="426dp"
         tools:srcCompat="@drawable/icono_eventos" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/alimentosbttn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        android:layout_width="118dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="136dp"
+        app:layout_constraintEnd_toEndOf="@+id/alimentosbttn"
         app:srcCompat="@drawable/basket"
+        tools:layout_editor_absoluteY="515dp"
         tools:srcCompat="@drawable/basket" />
 
     <Button
         android:id="@+id/buttonLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="33dp"
         android:background="@drawable/btn_bg"
         android:text="Log off"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
     <TextView
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginBottom="36dp"
         android:text="TextView"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/CrearORG"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/Nombre" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
