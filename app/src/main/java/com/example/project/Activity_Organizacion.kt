@@ -17,6 +17,9 @@ class Activity_Organizacion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_organizacion)
 
+        val actionBar = supportActionBar!!
+        actionBar.title = "Perfil de Organización"
+
         firebaseAuth = FirebaseAuth.getInstance()
         binding = ActivityOrganizacionBinding.inflate(layoutInflater)
         setContentView(binding.root)
