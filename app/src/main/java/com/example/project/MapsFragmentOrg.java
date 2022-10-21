@@ -202,6 +202,10 @@ public class MapsFragmentOrg extends Fragment {
         });
     }
 
+    private void makeNewLocations(){
+
+    }
+
     private void makePin(LatLng pinLocation, String name) {
         mMap.addMarker(new MarkerOptions()
                 .position(pinLocation)
