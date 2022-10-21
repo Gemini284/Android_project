@@ -62,7 +62,7 @@ class Activity_Organizacion : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-    }//xdxdxdxd
+    }
 
     fun irEventoORG(v: View?) {
         val intent = Intent(this, Evento_ORG::class.java)
