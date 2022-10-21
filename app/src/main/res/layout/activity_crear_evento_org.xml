@@ -16,8 +16,8 @@
         android:textColor="#070707"
         android:textSize="48sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="260dp" />
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="197dp" />
 
     <EditText
         android:id="@+id/eteventDirection"
