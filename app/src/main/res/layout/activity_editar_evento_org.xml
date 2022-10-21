@@ -4,60 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditarEventoOrg">
+    tools:context=".EditarEventoOrg"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Editar Evento"
-        android:textColor="#0E0E0E"
-        android:textSize="48sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintBottom_toTopOf="@+id/nuevaID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nuevaID"
-        android:layout_width="212dp"
-        android:layout_height="51dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Nombre"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="ID"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="256dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
 
     <EditText
         android:id="@+id/nuevaDire"
-        android:layout_width="209dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Nueva Dirección"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Nueva Dirección"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="361dp" />
+        app:layout_constraintEnd_toEndOf="@+id/nuevaID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nuevaID"
+        app:layout_constraintTop_toBottomOf="@+id/nuevaID" />
 
     <EditText
         android:id="@+id/nuevaFecha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Nueva Fecha"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="20sp"
-        android:text="Nueva Fecha"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="466dp" />
+        app:layout_constraintEnd_toEndOf="@+id/nuevaDire"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nuevaDire"
+        app:layout_constraintTop_toBottomOf="@+id/nuevaDire" />
 
     <Button
         android:id="@+id/updateBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="65dp"
-        android:backgroundTint="#00BCD4"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/btn_bg"
         android:text="Actualizar información"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="602dp" />
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nuevaFecha"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/nuevaFecha"
+        app:layout_constraintTop_toBottomOf="@+id/nuevaFecha"
+        app:layout_constraintVertical_bias="0.825" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
