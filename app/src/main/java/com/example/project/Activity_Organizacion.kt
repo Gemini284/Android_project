@@ -40,6 +40,9 @@ class Activity_Organizacion : AppCompatActivity() {
         binding.bttnEvento.setOnClickListener {
             startActivity(Intent(this, Evento_ORG::class.java))
         }
+        binding.Dona.setOnClickListener {
+            startActivity(Intent(this, UserListActivity::class.java))
+        }
     }
 
     private fun checkUser() {
