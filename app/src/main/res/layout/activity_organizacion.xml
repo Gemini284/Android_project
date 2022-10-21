@@ -154,11 +154,11 @@
         android:id="@+id/textView_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginBottom="101dp"
-        android:text="organizacion@gmail.com"
+        android:text="TextView"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/bttnPuntos"
+        app:layout_constraintEnd_toEndOf="@+id/Nombre"
         app:layout_constraintStart_toStartOf="@+id/Nombre"
         app:layout_constraintTop_toBottomOf="@+id/Nombre" />
 

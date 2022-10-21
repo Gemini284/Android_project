@@ -3,13 +3,20 @@ package com.example.project
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
+import androidx.core.content.ContextCompat.startActivity
 import com.example.project.databinding.ActivityOrganizacionBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 private lateinit var  binding: ActivityOrganizacionBinding
 private lateinit var firebaseAuth: FirebaseAuth
+private lateinit var databaseReference: DatabaseReference
+
 
 class Activity_Organizacion : AppCompatActivity() {
 
@@ -40,7 +47,11 @@ class Activity_Organizacion : AppCompatActivity() {
         binding.Dona.setOnClickListener {
             startActivity(Intent(this, UserListActivity::class.java))
         }
+        binding.textViewEmpresa.text = firebaseAuth.currentUser?.email.toString()
+        muestraNombre()
+        //binding.Nombre.text = nombre
     }
+
 
     private fun checkUser() {
         val firebaseUser = firebaseAuth.currentUser
@@ -56,5 +67,18 @@ class Activity_Organizacion : AppCompatActivity() {
     fun irEventoORG(v: View?) {
         val intent = Intent(this, Evento_ORG::class.java)
         startActivity(intent)
+    }
+    private fun muestraNombre(){
+
+        databaseReference = Firebase.database.getReference("Usuarios")
+        val firebaseUser = firebaseAuth.currentUser
+        val uid = firebaseUser?.uid
+        if (uid != null) {
+            databaseReference.child(uid).child("Nombre").get().addOnSuccessListener {
+                binding.Nombre.text = it.value.toString()
+            }.addOnFailureListener{
+                Log.e("firebase", "Error getting data", it)
+            }
+        }
     }
 }
