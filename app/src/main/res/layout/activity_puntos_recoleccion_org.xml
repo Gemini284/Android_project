@@ -48,4 +48,37 @@
         app:layout_constraintTop_toBottomOf="@+id/textPuntosInfo2"
 
         />
+
+    <Button
+        android:id="@+id/borrarBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_bg"
+        android:text="Borrar"
+        app:layout_constraintStart_toStartOf="@+id/map_placeholder2"
+        app:layout_constraintTop_toBottomOf="@+id/map_placeholder2" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="@+id/borrarBtn"
+        app:layout_constraintEnd_toEndOf="@+id/map_placeholder2"
+        app:layout_constraintStart_toEndOf="@+id/borrarBtn" />
+
+    <EditText
+        android:id="@+id/editPinName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombra tu pin"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/map_placeholder2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPuntosInfo2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
