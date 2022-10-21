@@ -35,7 +35,7 @@ class Activity_Organizacion : AppCompatActivity() {
             startActivity(Intent(this, EmpresasAliadas::class.java))
         }
         binding.bttnPuntos.setOnClickListener{
-            startActivity(Intent(this, PuntoRecoleccionActivity::class.java))
+            startActivity(Intent(this, PuntosRecoleccionOrg::class.java))
         }
         binding.bttnEvento.setOnClickListener {
             startActivity(Intent(this, Evento_ORG::class.java))
