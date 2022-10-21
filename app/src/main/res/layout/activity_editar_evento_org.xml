@@ -10,81 +10,54 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:text="Editar Evento"
         android:textColor="#0E0E0E"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/nuevaID"
-        app:layout_constraintStart_toStartOf="@+id/imageView13"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="160dp" />
 
     <EditText
         android:id="@+id/nuevaID"
         android:layout_width="212dp"
         android:layout_height="51dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginBottom="54dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="ID"
-        app:layout_constraintBottom_toTopOf="@+id/nuevaDire"
-        app:layout_constraintStart_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="256dp" />
 
     <EditText
         android:id="@+id/nuevaDire"
         android:layout_width="209dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="55dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Nueva Dirección"
-        app:layout_constraintBottom_toTopOf="@+id/nuevaFecha"
-        app:layout_constraintStart_toStartOf="@+id/nuevaID"
-        app:layout_constraintTop_toBottomOf="@+id/nuevaID" />
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="361dp" />
 
     <EditText
         android:id="@+id/nuevaFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Nueva Fecha"
         android:padding="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/updateBtn"
-        app:layout_constraintStart_toStartOf="@+id/nuevaDire"
-        app:layout_constraintTop_toBottomOf="@+id/nuevaDire" />
+        android:text="Nueva Fecha"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="466dp" />
 
     <Button
         android:id="@+id/updateBtn"
         android:layout_width="wrap_content"
         android:layout_height="65dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="64dp"
         android:backgroundTint="#00BCD4"
         android:text="Actualizar información"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nuevaFecha" />
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="602dp" />
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bancodealimentos" />
 </androidx.constraintlayout.widget.ConstraintLayout>

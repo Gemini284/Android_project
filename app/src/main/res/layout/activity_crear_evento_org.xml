@@ -7,74 +7,46 @@
     android:background="#EFF2F4"
     tools:context=".CrearEvento_ORG">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintStart_toStartOf="@+id/textView13"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bancodealimentos" />
-
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="26dp"
         android:fontFamily="serif"
         android:text="Crear Evento"
         android:textColor="#070707"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/eteventDirection"
-        app:layout_constraintStart_toStartOf="@+id/eteventDirection"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="260dp" />
 
     <EditText
         android:id="@+id/eteventDirection"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="323dp"
+        android:layout_height="65dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Direccion"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/eteventDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="351dp" />
 
     <EditText
         android:id="@+id/eteventDate"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="47dp"
+        android:layout_width="323dp"
+        android:layout_height="65dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Fecha"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnInsertData"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eteventDirection" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="438dp" />
 
     <Button
         android:id="@+id/btnInsertData"
         android:layout_width="181dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="116dp"
+        android:layout_height="65dp"
         android:backgroundTint="#00BCD4"
         android:text="Crear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eteventDate" />
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="550dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
