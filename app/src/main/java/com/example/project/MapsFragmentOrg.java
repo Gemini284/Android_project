@@ -25,6 +25,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -79,6 +80,14 @@ public class MapsFragmentOrg extends Fragment {
             }
             //Creacion de pines desde firebase
             getSavedLocations();
+
+            mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                @Override
+                public void onMapClick(@NonNull LatLng latLng) {
+                    makeNewPin(latLng);
+                    writeNewLocation(latLng, "");
+                }
+            });
         }
     };
 
@@ -202,9 +211,6 @@ public class MapsFragmentOrg extends Fragment {
         });
     }
 
-    private void makeNewLocations(){
-
-    }
 
     private void makePin(LatLng pinLocation, String name) {
         mMap.addMarker(new MarkerOptions()
@@ -214,4 +220,19 @@ public class MapsFragmentOrg extends Fragment {
         );
     }
 
+    private void makeNewPin(LatLng pinLocation){
+         mMap.addMarker(new MarkerOptions()
+                    .position(pinLocation)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                    .alpha(0.5f)
+
+         );
+    }
+
+    private void writeNewLocation(LatLng latLng, String name){
+        DatabaseReference pushedLocRef = mDatabase.child("Locaciones").push();
+        String locacionId = pushedLocRef.getKey();
+        Locacion loc = new Locacion(latLng.latitude, latLng.longitude, name);
+        mDatabase.child("Locaciones").child(locacionId).setValue(loc);
+    }
 }
