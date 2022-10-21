@@ -60,10 +60,12 @@ class Activity_Donador : AppCompatActivity() {
         binding.CrearORG.setOnClickListener {
             startActivity(Intent(this, donacion::class.java))
         }
+        binding.Empresas.setOnClickListener {
+            startActivity(Intent(this, EmpresasAliadas::class.java))
+        }
         binding.email.text = firebaseAuth.currentUser?.email.toString()
         muestraNombre()
         //binding.Nombre.text = nombre
-
     }
 
     private fun checkUser() {

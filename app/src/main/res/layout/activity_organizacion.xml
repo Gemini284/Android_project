@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity_Organizacion">
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="99dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="492dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLog"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,88 +22,92 @@
         android:id="@+id/Nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="119dp"
         android:text="Banco de Alimentos"
         android:textAlignment="center"
         android:textColor="@color/red"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <Button
-        android:id="@+id/CrearORG"
-        android:layout_width="155dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:autoSizeTextType="uniform"
-        android:background="@drawable/btn_other"
-        android:text="Empresas Aliadas"
+        app:layout_constraintBottom_toTopOf="@+id/textView_empresa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_empresa" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/editInven"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="115dp"
         android:autoSizeTextType="uniform"
         android:background="@drawable/btn_other"
         android:text="Editar Inventario"
-        app:layout_constraintEnd_toEndOf="@+id/Dona"
-        app:layout_constraintStart_toStartOf="@+id/Dona"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/Dona" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="137dp"
-        android:layout_height="64dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editInven"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginBottom="197dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editInven"
-        app:layout_constraintTop_toTopOf="@+id/editInven"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:srcCompat="@drawable/basket"
         tools:srcCompat="@drawable/basket" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="135dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bttnPuntos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
         app:layout_constraintEnd_toStartOf="@+id/bttnPuntos"
-        app:layout_constraintTop_toTopOf="@+id/bttnPuntos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/icono_puntos" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="132dp"
-        android:layout_height="81dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bttnEvento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
         app:layout_constraintEnd_toStartOf="@+id/bttnEvento"
-        app:layout_constraintTop_toTopOf="@+id/bttnEvento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/icono_eventos"
         tools:srcCompat="@drawable/icono_eventos" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="135dp"
-        android:layout_height="59dp"
-        app:layout_constraintBottom_toBottomOf="@+id/CrearORG"
-        app:layout_constraintEnd_toStartOf="@+id/CrearORG"
-        app:layout_constraintTop_toTopOf="@+id/CrearORG"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/icono_donacion"
         tools:srcCompat="@drawable/icono_donacion" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="122dp"
-        android:layout_height="57dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/Dona"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/Dona"
-        app:layout_constraintTop_toTopOf="@+id/Dona"
-        app:layout_constraintVertical_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
         app:srcCompat="@drawable/coin_icon"
         tools:srcCompat="@drawable/coin_icon" />
 
@@ -109,58 +115,64 @@
         android:id="@+id/bttnEvento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="21dp"
         android:background="@drawable/btn_other"
         android:text="Eventos"
-        app:layout_constraintEnd_toEndOf="@+id/bttnPuntos"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintBottom_toTopOf="@+id/Dona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toBottomOf="@+id/bttnPuntos" />
 
     <Button
         android:id="@+id/bttnPuntos"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="19dp"
         android:autoSizeTextType="uniform"
         android:background="@drawable/btn_other"
         android:text="Puntos de recolección"
-        app:layout_constraintEnd_toEndOf="@+id/CrearORG"
-        app:layout_constraintStart_toStartOf="@+id/CrearORG"
-        app:layout_constraintTop_toBottomOf="@+id/CrearORG" />
+        app:layout_constraintBottom_toTopOf="@+id/bttnEvento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView_empresa" />
 
     <Button
         android:id="@+id/buttonLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="42dp"
         android:background="@drawable/btn_bg"
         android:text="Log off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintTop_toBottomOf="@+id/editInven" />
 
     <TextView
         android:id="@+id/textView_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="101dp"
         android:text="organizacion@gmail.com"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/Nombre"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintBottom_toTopOf="@+id/bttnPuntos"
         app:layout_constraintStart_toStartOf="@+id/Nombre"
         app:layout_constraintTop_toBottomOf="@+id/Nombre" />
 
     <Button
         android:id="@+id/Dona"
-        android:layout_width="155dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_other"
         android:text="Donaciones"
-        app:layout_constraintEnd_toEndOf="@+id/bttnEvento"
-        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintBottom_toTopOf="@+id/editInven"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
         app:layout_constraintTop_toBottomOf="@+id/bttnEvento" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
