@@ -227,6 +227,7 @@ public class MapsFragmentOrg extends Fragment {
                     .alpha(0.5f)
 
          );
+        Toast.makeText(getActivity(), "Pin Guardado", Toast.LENGTH_SHORT).show();
     }
 
     private void writeNewLocation(LatLng latLng, String name){
